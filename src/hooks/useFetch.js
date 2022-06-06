@@ -6,7 +6,7 @@ const useFetch = (path) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
-  const baseUrl = "https://booking-app-api-b.herokuapp.com/api/"
+  const baseUrl = "https://booking-app-api-b.herokuapp.com/api"
   const url = baseUrl + path;
 
   useEffect(() => {
