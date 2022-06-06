@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const useFetch = (url) => {
+const useFetch = (path) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+
+  const baseUrl = "https://booking-app-api-b.herokuapp.com/api/"
+  const url = baseUrl + path;
 
   useEffect(() => {
     const fetchData = async () => {
