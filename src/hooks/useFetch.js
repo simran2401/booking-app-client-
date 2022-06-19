@@ -5,7 +5,6 @@ const useFetch = (path) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-  const path = 'https://bookingssss.herokuapp.com/api' + url;
 
   const baseUrl = "https://booking-app-api-b.herokuapp.com/api"
   const url = baseUrl + path;
@@ -14,7 +13,7 @@ const useFetch = (path) => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const res = await axios.get(path);
+        const res = await axios.get(url);
         setData(res.data);
       } catch (err) {
         setError(err);
@@ -22,12 +21,12 @@ const useFetch = (path) => {
       setLoading(false);
     };
     fetchData();
-  }, [path]);
+  }, [url]);
 
   const reFetch = async () => {
     setLoading(true);
     try {
-      const res = await axios.get(path);
+      const res = await axios.get(url);
       setData(res.data);
     } catch (err) {
       setError(err);
