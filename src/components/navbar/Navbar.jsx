@@ -16,8 +16,8 @@ const Navbar = () => {
           user.username
         ) : (
           <div className='navItems'>
-            <button className='navButton' onClick={() => navigate('/login')}>Register</button>
-            <button className='navButton' onClick={() => navigate('/register')}>Login</button>
+            <button className='navButton' onClick={() => navigate('/register')}>Register</button>
+            <button className='navButton' onClick={() => navigate('/login')}>Login</button>
           </div>
         )}
       </div>
